@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2025-06-19T06:14:20Z</time>
+    <bounds maxlat="50.075553506612778" maxlon="14.430316686630249" minlat="50.074330000206828" minlon="14.429683350026608" />
+  </metadata>
+
+  <wpt lat="50.074330000206828" lon="14.430309981107712">
+    <ele>233.49609375</ele>
+    <time>2025-06-19T05:29:50Z</time>
+    <name>50.07433, 14.43031</name>
+    <cmt>do radku poloha vlozeno 50.07433, 14.43031
+z aplikace maps.my</cmt>
+    <desc>do radku poloha vlozeno 50.07433, 14.43031
+z aplikace maps.my</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2025-06-19T05:29:50Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.075370781123638" lon="14.429977471008897">
+    <ele>233.7421875</ele>
+    <time>2025-06-19T05:30:16Z</time>
+    <name>50.0753708N, 14.4299775E</name>
+    <cmt>do radku poloha vlozeno 50.0753708N, 14.4299775E
+z mapy.cz</cmt>
+    <desc>do radku poloha vlozeno 50.0753708N, 14.4299775E
+z mapy.cz</desc>
+    <sym>Flag, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2025-06-19T05:30:16Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.075553506612778" lon="14.42968393675983">
+    <ele>233.63671875</ele>
+    <time>2025-06-19T05:29:05Z</time>
+    <name>50.0755535254892, 14.429683968740438</name>
+    <cmt>do radku polha vlozeno 50.0755535254892, 14.429683968740438
+z Google maps</cmt>
+    <desc>do radku polha vlozeno 50.0755535254892, 14.429683968740438
+z Google maps</desc>
+    <sym>Flag, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2025-06-19T05:29:05Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.074331760406494" lon="14.430305957794189">
+    <ele>245.91796875</ele>
+    <time>2025-06-16T07:37:57Z</time>
+    <name>I. P. Pavlova ( skutecnost )</name>
+    <cmt>toto je trasovy bod primo z mapy</cmt>
+    <desc>toto je trasovy bod primo z mapy</desc>
+    <sym>Pin, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Praha</gpxx:City>
+          <gpxx:Country>CZE</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Praha</wptx1:City>
+          <wptx1:Country>CZE</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2025-06-16T07:37:57Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.075549986213446" lon="14.429683350026608">
+    <ele>233.625</ele>
+    <time>2025-06-19T05:34:57Z</time>
+    <name>prevod utilitou Google Maps</name>
+    <cmt>tyto souradnice v radku Poloha byly ziskany prevodem
+Google maps souradnice 50.0755535254892, 14.429683968740438
+do formatu Garmin a vlozeni jako pozice trasoveho bodu
+
+je zde vydet ze predvod pomoci BaseCamp-u samotneho a prevod pomoci utility dava stejny vysledek
+respektive stejnou nepresnost, protoze oba body jsou na mape v zakrytu
+
+
+</cmt>
+    <desc>tyto souradnice v radku Poloha byly ziskany prevodem
+Google maps souradnice 50.0755535254892, 14.429683968740438
+do formatu Garmin a vlozeni jako pozice trasoveho bodu
+
+je zde vydet ze predvod pomoci BaseCamp-u samotneho a prevod pomoci utility dava stejny vysledek
+respektive stejnou nepresnost, protoze oba body jsou na mape v zakrytu
+
+
+</desc>
+    <sym>Flag, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2025-06-19T05:34:57Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.074333352968097" lon="14.430316686630249">
+    <ele>243.421875</ele>
+    <time>2025-06-19T05:45:15Z</time>
+    <name>prevod utilitou pro maps.my</name>
+    <cmt>
+
+pozice 50.07433, 14.43031 prevedena utrilitou pro maps.my
+a vlozena sem jako Pozice trasoveho bodu
+
+dva travove body z ikonou modreho praporku pro maps.my
+prvni z polohou v nazvu bodu je primy prevod programem BaseCamp 
+a tento modry praporek ma polohu bodu ziskane pomoci utility pro 
+prevod polohy bodu z maps.my do formatu garmin
+
+i zde je vydet ze program i utilita davaji temer stejny vysledek
+
+
+</cmt>
+    <desc>
+
+pozice 50.07433, 14.43031 prevedena utrilitou pro maps.my
+a vlozena sem jako Pozice trasoveho bodu
+
+dva travove body z ikonou modreho praporku pro maps.my
+prvni z polohou v nazvu bodu je primy prevod programem BaseCamp 
+a tento modry praporek ma polohu bodu ziskane pomoci utility pro 
+prevod polohy bodu z maps.my do formatu garmin
+
+i zde je vydet ze program i utilita davaji temer stejny vysledek
+
+
+</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Praha</gpxx:City>
+          <gpxx:Country>CZE</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Praha</wptx1:City>
+          <wptx1:Country>CZE</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2025-06-19T05:45:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.075366673991084" lon="14.429983338341117">
+    <ele>231.625</ele>
+    <time>2025-06-19T05:40:19Z</time>
+    <name>prevod utilitou z mapy.cz</name>
+    <cmt>do radku Pozice vlozen vysledek prevodu utilitou pro mapy.cz
+vlozeno 50.0753708N, 14.4299775E
+vysledek N50° 04.522' E14° 25.799'
+
+tady uz je vydet naly rozdil mezi prevodem souradnice pomoci BaseCampu a udility
+oba body nejsou presne na sobe jako tomu bylo u dvojice google bodu
+
+</cmt>
+    <desc>do radku Pozice vlozen vysledek prevodu utilitou pro mapy.cz
+vlozeno 50.0753708N, 14.4299775E
+vysledek N50° 04.522' E14° 25.799'
+
+tady uz je vydet naly rozdil mezi prevodem souradnice pomoci BaseCampu a udility
+oba body nejsou presne na sobe jako tomu bylo u dvojice google bodu
+
+</desc>
+    <sym>Flag, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2025-06-19T05:40:19Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>

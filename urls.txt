@@ -1,0 +1,19 @@
+
+download programu BaseCamp
+https://www8.garmin.com/support/download_details.jsp?id=4435
+https://download.garmin.com/software/BaseCamp_475.exe
+
+
+open source mapy pro BaseCamp, zdarma
+https://garmin.opentopomap.org/
+https://garmin.opentopomap.org/#europe
+
+open source mapa pro Basecamp Ceska Republika
+https://garmin.opentopomap.org/europe/czech-republic/otm-czech-republic-basecamp.zip
+
+
+www stranka, prevod GPS souradnic
+https://boulter.com/gps/
+pozn.
+prevod z "mapy.cz" neumi vubec a "Google Maps"
+prevadi stejne jako program "Basecamp" a nebo moje utility

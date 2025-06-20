@@ -1,0 +1,99 @@
+
+17.6.2025
+převadí GPS souřadnice z Android aplikace "Maps.My" do formatu pro Garmin 
+např. souřadnice "50.07433, 14.43031" převede na N50° 04.460' E14° 25.819'
+toto je ukazka jiné souřadnice z aplikace MapsMy "40.774126, -73.972655"
+která má ale šest desetiných mist misto pěti jako měla ta z předchozího 
+příkladu, nepoužívaj nějakej standard a prostě jednou je to tak a podruhý
+zase tak, na převod to ale namá vliv
+tento konvertor použvám v programu BaseCamp (Windows)
+a v turistický GPS navigaci Garmin Dakota
+
+v budoucnu bych chtěl jestě udělat dalši dvě konverzní utilitky
+jednak pro převod souřadnic který používaji stranky "mapy.cz"
+druhak pro převod souřadnic z Google Maps do formatu Garmin
+a možná ještě něco dalšího
+
+
+18.6.2025
+GPS navigace od Garminu kterou mam pracuje tak ze si vystaci uplne
+sama ze sebou ale take ji lze pres USB kabel pripojit k pocitaci
+a v nem pak pustit program BaseCamp (posledni verze byla 4.7.5)
+a tento program pak z navigaci komunikuje po USB kabelu, do navigace
+se daji posilat data ktera se vytvorila v programu jako jsou
+trasove body, naplanovane trasy a take se daji stahovat data
+pres kabel do z navigace do programu napr. prosle trasi (navigace
+klada trasu) a nebo ruzne trasove body vytvorene v GPS-ce
+narychlo nekde v terenu apod.
+v programu se daji vsechna data take zalohovat a exportovat
+zde napriklad soubor "testovani.gpx"
+doporucuje se podivat na strukturu souboru "testovani.gpx.xml.txt"
+coz je vlastne pouze prejmenovany soubor "testovani.gpx"
+k prohlizeni doporucuju muj jiz nekolikrat zminovany oblibeny editor
+"Geany" (freeware)
+proc tedy to vsechno, duvod je jednoduchy,
+cele to proste funguje trochu jinak nezli treba "Google Maps" 
+"mapy.cz" od "Seznam.cz" apod. kde je clovek nekde zaregistrovenej 
+ma u nekoho nejakej ucet do kteryho je prihlasenej a do neho (k nim)
+se mu (jim) ukladaji vsechny informace jako jsou ruzne polozky 
+"oblibene", sdileni polohy a dalsi informace v "obchodnim" styku
+
+obcas se my stalo ze treba nekde na webu byla adresa nejake firmy
+a u ni bylo navic take informace o poloze sidla firmy, nebo o poloze
+prodejny jako souradnice GPS, dnes jiz samozdrejme ve formatu
+ktery pouziva "Google Maps" a nebo treba "mapy.cz"
+takze tady vznikla potreba nejakyho co nejjednodusiho prevodu mezi 
+novejsima a starsima formatama GPS souradnic, jak jsem jiz psal
+program BaseCamp nejake konverze jiz vzlada sam o sobe ale ne
+vzdy je chut kvuli nejake malickosti poustet program, pripojovat
+pres kabel navigaci a je rychlejsi si tech par udaju radeji
+naklepat primo do navigace rucne, tim ze si vytvorim novy trasovy bod
+ten si prejmenuju jak potrebuju a nasledne mu jiz pouze upravim polohu
+podle vypoctu utility z konzoloveho okna ( viz. screenshoty ) a vic
+nepotrebuju
+
+
+19.6.2025
+dnes jsem jeste napsal dva jiz drive zminovane konvertory a to z
+"Google Maps" do formatu "Garmin" a z "Mapy.cz" do "Garmin"
+u prvniho jemnovaneho tedy "Gogle Maps" jsem mel praci o neco jednodussi
+format souradnic je skoro stejny jako pro aplikaci "maps.my"
+akorat se lisi poctem desetinych mist, priklad souradnice pro Google
+"50.0755535254892, 14.429683968740438"  a totez pro "maps.my"
+"50.07433, 14.43031" i zde jsem se setkal z nestejnym poctem desetinych
+mist jednou bylo 13 jindy 14 a vetsinou 15
+musim rict ze prevod z "Google Maps" do "Garmin" vykazuje vetsi nepresnost
+nez prevod z formatu "maps.my" do "Garmin" vice viz. screenshoty a prilozeny
+soubor "gpx" ani po usilovnem hledani na internetu se me nepodarilo
+najit zpusob jak toto vice zpresnit, tato vyssi nepresnost se tyka
+i prevodu z "mapy.cz" do "Garmin" nejlepe z tohoto vysel format "maps.my"
+u formatu souradnic pro "mapy.cz" jsem se setkal stim ze nepouziva
+kladne nebo zaporne cislo ale souradnice vypada napr. takto 
+50.0753708N, 14.4299775E jeji soucati je jiz rovnou to co se muselo u
+formatu "maps.my" a "google" urcovat v zavislosti na kladnem nebo zapornem
+cisle kde paklize bylo prvni cislo kladne znamenalo to "N" zaporne "S"
+druhe cislo kladne znamenalo "E" a druhe cislo zaporne znamenalo "W"
+takze anglicky sever, jih, vychod, zapad, format "mapy.cz" ma vsechna 
+cisla pouze kladna,delka desetinych mist pro "mapy.cz" lezi nekde uprostred 
+mezi "Google" a "maps.my" zde se zda ze pocet desetinych mist je konstante 7
+uvedu par prikladu
+a za sedmim znakem je vzdy ono pismeno (N,S,E nebo W)
+"50.0753708N, 14.4299775E" "33.9214156S, 18.4149131E"
+"64.1484644N, 21.9489853W" "54.5218975N, 18.5419822E"
+takze takto pro "mapy.cz"
+jak ziskat tuto polohu je na screenshotech v adresari "jpg\mapy.cz\"
+jeste doplim take pro "Google Maps", v "Google Maps" lze ziskat
+polohu nejakeho mista tak ze na  www stankach se pravim tlacitkem mysi
+klikne nekde na nejaky obekt na mape a obevi se nove okno nebo
+spise okenko a prvni polozka nahore v tomto okenku je prave souradnice
+bodu, uvedu par prikladu jak vypada soradnice bodu pro "Google Maps"
+"50.0755535254892, 14.429683968740438"
+"64.13767053395023, -21.89129586682449"
+"-33.90667755606154, 18.42039883044853"
+"54.53380303960464, 18.547973426086507"
+takze takto a v tomto tvaru (bez uvozovek) se souradnice zadavaji
+do konvertoru, samozdrejme si zde lze pomoci schrankou tzn.
+Ctrl+C pro vlozeni oznaceneho textu do clipboardu
+a Ctrl+v pro vlozeni obsahu clipboardu na pozici kurzoru
+ve zbylich dvou konvertorech je zpusob prace uplne stejni
+

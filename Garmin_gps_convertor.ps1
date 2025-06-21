@@ -5,7 +5,7 @@
     pro "Google Maps" a "MAPS.MY" se pouziva stejna metoda, souradnice se lisi pouze delkou,
     tedy poctem desetinych mist a pro "mapy.cz" ktera jako jedina v sobe krome cislic obahuje 
     i pismena a jeste neobsahuje nikdy zaporna cisla tak pro tu pouziva jinou metodu prevodu
-    vstup neni ostren proti chybe zadani ve smyslu regular expressions
+    vstup neni ostren proti chybe zadani ve smyslu regular expression
 #>
 
 Remove-Variable * -ErrorAction SilentlyContinue

@@ -97,3 +97,29 @@ Ctrl+C pro vlozeni oznaceneho textu do clipboardu
 a Ctrl+v pro vlozeni obsahu clipboardu na pozici kurzoru
 ve zbylich dvou konvertorech je zpusob prace uplne stejni
 
+
+21.6.2025
+dokoncena asi uz posledni verze konvertoru, nazev souboru je 
+"Garmin_gps_convertor.ps1" a tento script vlastne slucuje do jednoho
+vse predchozi, takze mu lze zadat jako vstup souradnice vsech tri tipu
+a program analizuje co mu bylo zadano a podle toho vybere metodu prevodu
+pro prevod z "Google Maps" a z aplilace "MAPS.MY" do formatu souradnic
+pro "Garmin" se pouziva stejna metoda, zde je vlastene rozdil pouze v poctu
+desetinych mist souradnice a zaporana cisla pouzivaji take oba dva tipy
+rozdil je pri prevodu z formatu "mapy.cz" ty jako jedine obsahuji
+pouze kladna cisla a taky jako jediny ze tri obsahuji v sobe krome cislic
+take pismeno (N,S,E,W) zde bylo nutne zvolit trochu odlisny zpusob prevodu
+program nema osetreni vstupu ve smyslu regular expression
+u teto verze jsem si docele vyhral z barvama, ne ze bych si vtom nejak
+vzlast liboval ale bylo potreba v napovede od sebe odlisi tri
+ruzne typy mozneho zadani, takze to muze trochu pripominat papouska
+
+mrzi me ze se mi ani pres veskerou snahu nepodarilo najit zpusob jak vice
+zpresnit prevod z formatu "Google Maps" a "mapy.cz" na internetu jsem taky
+nic nenasel, Microsoft Copilot tentokrate taky neporadil nic a www stranka
+z online konvertorem dava stejne vysledky jako moje scripty, tak opravdu
+nevim co stim, kazdopadne moje snaha zde nekonci a budu patrat dal
+paklize bych se me tento problem podarilo vyresit tak by v budoucnu 
+vznikla jeste jedna verze programu ktera by davala presnejsi vysledky
+coz bych byl rad, zatim je to pro me cele tak trosku zklamanim
+

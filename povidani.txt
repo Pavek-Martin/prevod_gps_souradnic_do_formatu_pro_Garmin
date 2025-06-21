@@ -112,8 +112,7 @@ take pismeno (N,S,E,W) zde bylo nutne zvolit trochu odlisny zpusob prevodu
 program nema osetreni vstupu ve smyslu regular expression
 u teto verze jsem si docele vyhral z barvama, ne ze bych si vtom nejak
 vzlast liboval ale bylo potreba v napovede od sebe odlisi tri
-ruzne typy mozneho zadani, takze to muze trochu pripominat papouska
-
+ruzne typy mozneho zadani
 mrzi me ze se mi ani pres veskerou snahu nepodarilo najit zpusob jak vice
 zpresnit prevod z formatu "Google Maps" a "mapy.cz" na internetu jsem taky
 nic nenasel, Microsoft Copilot tentokrate taky neporadil nic a www stranka

@@ -112,7 +112,8 @@ take pismeno (N,S,E,W) zde bylo nutne zvolit trochu odlisny zpusob prevodu
 program nema osetreni vstupu ve smyslu regular expression
 u teto verze jsem si docele vyhral z barvama, ne ze bych si vtom nejak
 vzlast liboval ale bylo potreba v napovede od sebe odlisi tri
-ruzne typy mozneho zadani
+ruzne typy mozneho zadani, takze to muze trochu pripominat papouska
+
 mrzi me ze se mi ani pres veskerou snahu nepodarilo najit zpusob jak vice
 zpresnit prevod z formatu "Google Maps" a "mapy.cz" na internetu jsem taky
 nic nenasel, Microsoft Copilot tentokrate taky neporadil nic a www stranka
@@ -121,4 +122,22 @@ nevim co stim, kazdopadne moje snaha zde nekonci a budu patrat dal
 paklize bych se me tento problem podarilo vyresit tak by v budoucnu 
 vznikla jeste jedna verze programu ktera by davala presnejsi vysledky
 coz bych byl rad, zatim je to pro me cele tak trosku zklamanim
+
+
+22.6.2025
+nekodazu si vysvetlit jednu vec, logicky si myslim ze vetsi pocet 
+desetinej mist, tim narazim na "Google Maps" ma vlastne polohu zpresnovat
+a ne naopak, proc dava souradnice z aplikce "maps.my" z 6ti desetinejma
+mistama lepsi vysledek nez "Google Maps" ktera ma desetinejch mist 15 !
+a podobne tak "mapy.cz" ja nevim co voni pouzivaj za metodu je to divny
+jako postup me pride spravnej kazdej vi ze hodina ma 60 minut
+udelal jsem mnoho trasovejch bodu primo v navigaci venku v terenu
+pri zobrazovany presnosti GPS signalu z toleranci 2 metry i onu jiz
+zminovanou stanici metra I.P. Pavlova a poloha preste fyzicky sedi
+a shoduje se i z polohou stanici metra I.P. Pavlova na mape v programu
+"BaseCamp" a i z vysledkem prevodu souradnice z aplikace "maps.my"
+moji utilitou me opravdu pripada tyhle firmy voni vzdycky pouzivaj
+neco extra aby se vtom krome nich nikdo jinej nevyznal a aby to 
+nebylo pouzitelny jinde, co firma to format, proste zase jenom dalsi
+"firmware" samozdrejme ze teda ne teda vtom dobrym slova smyslu
 

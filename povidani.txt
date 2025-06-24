@@ -125,12 +125,13 @@ coz bych byl rad, zatim je to pro me cele tak trosku zklamanim
 
 
 22.6.2025
-nekodazu si vysvetlit jednu vec, logicky si myslim ze vetsi pocet 
+nedokazu si vysvetlit jednu vec, logicky si myslim ze vetsi pocet 
 desetinej mist, tim narazim na "Google Maps" ma vlastne polohu zpresnovat
 a ne naopak, proc dava souradnice z aplikce "maps.my" z 6ti desetinejma
 mistama lepsi vysledek nez "Google Maps" ktera ma desetinejch mist 15 !
 a podobne tak "mapy.cz" ja nevim co voni pouzivaj za metodu je to divny
-jako postup me pride spravnej kazdej vi ze hodina ma 60 minut
+jako postup me pride spravnej kazdej vi ze hodina ma 60 minut a zbytek
+ze musej bejt vteriny protoze za tim uz nic jineho nejni,
 udelal jsem mnoho trasovejch bodu primo v navigaci venku v terenu
 pri zobrazovany presnosti GPS signalu z toleranci 2 metry i onu jiz
 zminovanou stanici metra I.P. Pavlova a poloha preste fyzicky sedi

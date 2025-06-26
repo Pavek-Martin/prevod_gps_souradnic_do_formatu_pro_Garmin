@@ -142,3 +142,30 @@ neco extra aby se vtom krome nich nikdo jinej nevyznal a aby to
 nebylo pouzitelny jinde, co firma to format, proste zase jenom dalsi
 "firmware" samozdrejme ze teda ne teda vtom dobrym slova smyslu
 
+
+aktualizovano 26.6.2025
+zjistil jsem ze sem asi trochu uspechal pripravu, provedl jsem druhou
+serii mereni a tentokrate jsem se zameril na zjistovani polohy u co 
+mozna nejvice bodovych obektu, napr. socha, majak, vyhlidka, apod.
+a jistil jsem ze stejne obekty jsou na mapach "Google Maps" a "mapy.cz"
+znaceny trochu rozdilne a ne vzdy ma stejni obekt stejnou polohu a nebo
+muze byt obektem na kazde z map mysleno neco trochu jineho
+napr. nastupiste metra vs. vchod do metra (metro ma dokonce i vice 
+vchodu) pribyla dalsi slozka se screenshoty "jpg/test_2" kde jsou
+vsechny vysledky a pridal jsem tam take dva *.gpx soubory
+(importovatelne do programu "BaseCamp")
+jak uz jsem naznacil stanice metra nebyla vhodnim obektem na testovani
+pravdepodobne se stalo ze trasovy bod jsem udelal v navigaci pred
+jednim vstupem do metra a na mape je potom jako metro znaceny jiny vstup
+pripadne nastupiste a nebo stred nastupiste, proste nejednoznacna poloha
+kdyz si clovek vezme delku eskalatoru v metru a delku nastupiste
+potom nejaky ten labyrit chodeb, vetsi ci mensi, nekolik vystupu
+tak muze bejt rozdil od jednoho konce k druhemu klidne i 100 metru
+po testovaci serii - 2 tektokrate na bodovych obektech jsem ziskal
+z online mapama vice zkusenosti a zjistuju ze nespresnoti v prevodu
+vznikaji spise diky rozdilech v jednotlivych mepach nezli z konvertoru
+jako takovem jak uz jsem rekl hodne dalsiho povidani a obrazku ktomu
+nove ve slozce "jpg/test_2"
+v soucasne dobe pracuju na C++ verzi ale v "C-cku" se zatim jeste hodne
+ucim takze to jde pomalu
+

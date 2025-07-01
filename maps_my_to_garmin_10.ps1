@@ -44,8 +44,8 @@ $degrees = [math]::Floor($absCoord)
 #write-host $degrees"<--d"
 $minutes = (($absCoord - $degrees) * 60)
 #write-host $minutes"<--m"
-#$r =  "{0:00}° {1:00.000}'" -f $degrees, $minutes
-$r =  "{00}° {1:00.000}'" -f $degrees, $minutes # neco jako printf()
+$r =  "{0:00}° {1:00.000}'" -f $degrees, $minutes
+#$r =  "{00}° {1:00.000}'" -f $degrees, $minutes # neco jako printf()
 echo $r # return $r
 }
 

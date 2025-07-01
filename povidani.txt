@@ -169,3 +169,30 @@ nove ve slozce "jpg/test_2"
 v soucasne dobe pracuju na C++ verzi ale v "C-cku" se zatim jeste hodne
 ucim takze to jde pomalu
 
+
+1.7.2025
+dnes konecne dokoncena a otestovana verze konvertoru napsana C++
+docela jsem si stim uzil C-cko nejni tak privetivy jako PS
+hodne komentaru je jiz primo na prislusnich mistech ve zdrojovem 
+souboru "Garmin_gps_convertor_3.cpp" takze nebudu psat zbytecne 2x
+mezi prevodem vteto verzi a ve verzi PS panuje uplna shoda viz.
+screenshoty v adrsari "jpg\jpg_porovnani_vysledku_verze_PowerShell_a_Cpp"
+PS verzi jsem uz testoval hodne, takze paklize verze Cpp dava stejne
+vysledky tak se tim zabyly dve mouchy jednou ranou
+co se nepovedlo a vlastne sem neprisel na to proc je aby se v Cpp verzi
+bulid-in funkce printf() (print format) chovala tak jak se po ni chce
+paklize se vlozi do uzivatelsky definovane funkce, v PowerShelu
+toto fungovalo bez problemu, tady jsem se stim tak dluho trapil
+ze jsem to nakonec udelal tak jak je udelano, pribylo tim nekolik
+promennych navic, vlasne 2x se dela totez, pro obe casti koordinatu
+a somozdrejme to ovlivnilo celou skladbu scriptu, protoze ten kdo
+vymyslel kdysi funkci tak urcite vedel proc tak cini
+
+pro uplnost, ve vezich PS bylo opraveno par chyb a byla udelana
+jeste verze "Garmin_gps_convertor_3.ps1" ktera navic oproti verzi
+"Garmin_gps_convertor_2.ps1" dela to ze na konci jeste vlozi vysledek
+prevodu do clipboardu ve Windows ono zname (Ctll+c) takze po ukonceni
+programu zustene vysledek ve schrance a da se pak kamkoliv vlozit
+pomoci klavesove zkratky (Ctrl+v), takze pribyla jeste dalsi moznost
+co se da pouzivat
+

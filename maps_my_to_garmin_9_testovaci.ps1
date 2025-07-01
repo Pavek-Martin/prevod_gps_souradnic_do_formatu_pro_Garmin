@@ -22,7 +22,7 @@ $maps_my = "50.07433, 14.43031" # metro I.P. Pavlova v aplikaci MapsMy ( sedi pr
 #$maps_my = "64.14599, -21.942253" # Reykjavik  N64° 08.759' W21° 56.535' skutecnst (BaseCamp)
 #                                               N64° 08.759' W21° 56.535' vypocet sedi        
 
-$maps_my = "-33.928997, 18.417401" # kapske mesto  S33° 55.740' E18° 25.044' skutecnost
+#$maps_my = "-33.928997, 18.417401" # kapske mesto  S33° 55.740' E18° 25.044' skutecnost
 #                                                   S33° 55.740' E18° 25.044' vypocet
 
 #$maps_my = "-4.321699, 15.312604" # Kinshasa     S4° 19.302' E15° 18.756' skutecnost
@@ -33,7 +33,7 @@ $maps_my = "-33.928997, 18.417401" # kapske mesto  S33° 55.740' E18° 25.044' s
 
 #$maps_my = "40.774126, -73.972655" # Central Park  N40° 46.448' W73° 58.359' skutecnost (BaseCamp)
 #                                                  N40° 46.448' W73° 58.359' vypocet
-# posledni definici si ponecha ( prepise hodnotu premenne $maps_my z radku 17 )
+# posledni definici si ponecha ( prepise hodnotu premenne $maps_my z radku 18 )
 
 #$maps_my = "3.741895, 8.774065" # Malabo   N3° 44.514' E8° 46.444' skutecnost
 #                                           N3° 44.514' E8° 46.444' vypocet
@@ -71,7 +71,7 @@ write-host $absCoord"<--a" # "write-host" se na rozdil od prikazu "echo" nebude 
 $degrees = [math]::Floor($absCoord)
 write-host $degrees"<--d"
 $minutes = (($absCoord - $degrees) * 60)
-write-host $minutes"<--m"
+write-host $minutes"<--mm"
 #$r =  "{0:00}° {1:00.000}'" -f $degrees, $minutes
 $r =  "{00}° {1:00.000}'" -f $degrees, $minutes
 echo $r # return $r

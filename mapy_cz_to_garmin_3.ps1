@@ -13,7 +13,7 @@ echo "54.5218975N, 18.5419822E" # pocet desetinych mist je pro mapy.cz vzdy stej
 
 Write-Host -ForegroundColor Red " ^- toto jsou priklady souradnice bodu z www stranek mapy.cz"
 
-$mapy_cz = Read-Host -Prompt "zadej souradnice "
+$mapy_cz = Read-Host -Prompt "zadej souradnice z mapy.cz "
 echo $mapy_cz
 #echo $mapy_cz.GetType() #string
 
@@ -53,11 +53,10 @@ function mapy_cz_to_garmin ([double] $Coordinate) {
 # $degrees = [math]::Floor($absCoord) # proto zde tyto dva radky odpadaji a pribyli nove promenne $p2 a $p4
 $degrees = [math]::Floor($Coordinate)
 $minutes = (($Coordinate - $degrees) * 60)
-#$r2 =  "N{0:00}° {1:00.000}'" -f $degrees, $minutes
-$r2 =  "{0:00}° {1:00.000}'" -f $degrees, $minutes
+#$r2 =  "{0:000}° {1:000.0000}'" -f $degrees, $minutes # stupne 054, minuty 031, vteriny 3139
+$r2 =  "{0:00}° {1:00.000}'" -f $degrees, $minutes # ok.
 echo $r2
 }
-
 
 #mapy_cz_to_garmin $s2
 #mapy_cz_to_garmin $s4
@@ -68,6 +67,5 @@ $mapy_cz_1 = $p2 + $(mapy_cz_to_garmin $s2) + " " + $p4 + $(mapy_cz_to_garmin $s
 echo "prevedeno do formatu Garmin"
 #echo $mapy_cz_1
 Write-Host -ForegroundColor Yellow $mapy_cz_1
-
-sleep 300
+sleep 30
 

@@ -74,6 +74,7 @@ $minutes = (($absCoord - $degrees) * 60)
 write-host $minutes"<--mm"
 #$r =  "{0:00}° {1:00.000}'" -f $degrees, $minutes
 $r =  "{00}° {1:00.000}'" -f $degrees, $minutes
+$r = $r -replace "," , "." # nahrazuje vschny vyskyta znaku "," za znak "."
 echo $r # return $r
 }
 

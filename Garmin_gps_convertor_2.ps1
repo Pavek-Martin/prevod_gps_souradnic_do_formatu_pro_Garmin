@@ -73,10 +73,12 @@ break # po prvnim nalezu jakehokoliv pismena z pole $pole_seznam_cz
 function mapy_cz ([double] $Coordinate) {
 # $absCoord = [math]::Abs($Coordinate) # prevod na absolutni hodnotu ( mapy.cz nepouziva zaporna cisla jako maps.my)
 # $degrees = [math]::Floor($absCoord) # proto zde tyto dva radky odpadaji a pribyli nove promenne $p2 a $p4
-$degrees = [math]::Floor($Coordinate)
+$degrees = [math]::Floor($Coordinate) # nevim jesli tady jde - local $degrees - napr. ??
 $minutes = (($Coordinate - $degrees) * 60)
 #$r2 =  "N{0:00}° {1:00.000}'" -f $degrees, $minutes
 $r2 =  "{0:00}° {1:00.000}'" -f $degrees, $minutes # ok.
+$r2 = $r2 -replace "," , "." # nahrazuje vschny vyskyta znaku "," za znak "."
+# viz. screenshoty v adresari - "jpg/funkce_string_raplace/"
 echo $r2
 }
 
@@ -91,6 +93,7 @@ $minutes = (($absCoord - $degrees) * 60)
 #write-host $minutes"<--m"
 $r =  "{0:00}° {1:00.000}'" -f $degrees, $minutes # tohle je dobre, dela napr. 09 stupnu a 09 minut apod.
 #$r =  "{00}° {1:00.000}'" -f $degrees, $minutes # nedelalo nuly pri <10 stupnu
+$r = $r -replace "," , "."
 echo $r # return $r
 }
 
@@ -152,3 +155,4 @@ Write-Host -ForegroundColor $c $out_2 # jinou barvou pro odliseni
 }
 
 sleep 30
+

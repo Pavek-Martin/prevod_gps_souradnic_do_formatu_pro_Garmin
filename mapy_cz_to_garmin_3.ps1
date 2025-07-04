@@ -55,6 +55,7 @@ $degrees = [math]::Floor($Coordinate)
 $minutes = (($Coordinate - $degrees) * 60)
 #$r2 =  "{0:000}° {1:000.0000}'" -f $degrees, $minutes # stupne 054, minuty 031, vteriny 3139
 $r2 =  "{0:00}° {1:00.000}'" -f $degrees, $minutes # ok.
+$r2 = $r2 -replace "," , "." # nahrazuje vschny vyskyta znaku "," za znak "."
 echo $r2
 }
 

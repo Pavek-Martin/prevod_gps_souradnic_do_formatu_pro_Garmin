@@ -1,4 +1,7 @@
-#!/usr/bin/lua
+#!/data/data/com.termux/files/usr/bin/lua
+--#!/usr/bin/lua
+
+-- final verze
 
 -- garmin_gps_convertor
 -- Google Maps, Mapy.cz a Android aplikace MAPS.MY -> Garmin
@@ -236,4 +239,3 @@ print(bold_green .. "prevedeno do formatu pro Garmin")
 print(out_neni_mapy_cz)
 print(reset)
 os.exit(0)
-

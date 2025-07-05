@@ -1,6 +1,6 @@
 
 17.6.2025
-převadí GPS souřadnice z Android aplikace "Maps.My" do formatu pro Garmin 
+převadí GPS souřadnice z Android aplikace "MAPS.ME" do formatu pro Garmin 
 např. souřadnice "50.07433, 14.43031" převede na N50° 04.460' E14° 25.819'
 toto je ukazka jiné souřadnice z aplikace MapsMy "40.774126, -73.972655"
 která má ale šest desetiných mist misto pěti jako měla ta z předchozího 
@@ -103,7 +103,7 @@ dokoncena asi uz posledni verze konvertoru, nazev souboru je
 "Garmin_gps_convertor.ps1" a tento script vlastne slucuje do jednoho
 vse predchozi, takze mu lze zadat jako vstup souradnice vsech tri tipu
 a program analizuje co mu bylo zadano a podle toho vybere metodu prevodu
-pro prevod z "Google Maps" a z aplilace "MAPS.MY" do formatu souradnic
+pro prevod z "Google Maps" a z aplilace "MAPS.ME" do formatu souradnic
 pro "Garmin" se pouziva stejna metoda, zde je vlastene rozdil pouze v poctu
 desetinych mist souradnice a zaporana cisla pouzivaji take oba dva tipy
 rozdil je pri prevodu z formatu "mapy.cz" ty jako jedine obsahuji
@@ -196,3 +196,52 @@ programu zustene vysledek ve schrance a da se pak kamkoliv vlozit
 pomoci klavesove zkratky (Ctrl+v), takze pribyla jeste dalsi moznost
 co se da pouzivat
 
+
+5.7.2025 update
+ještě jsem napsal jednu verzi programu, v jazyce Lua verze 5.2.3
+program poběži na počítači z linuxem např. Ubuntu a na tabletu
+z androidem v aplikaci Temux ( už jsem o ní psal mnohokrát )
+umi už rovnou vsechny tři formáty souřadnic jako předchozí C++
+verze.
+následuje postup, krok po kroku jak ji zprovoznit na tabletu z
+Androidem:
+1) z Google play si stahněte aplikaci Termux ( černá ikona )
+2) v oteřené aplikaci zadejte postupně nasledujíci sekvenci
+   příkazu, za každým příkazem zmačnete Enter, počkejte až se
+   dokončí a pak zadejte dalsi:
+   
+   cd ~
+   termux-setup-storage
+   apt-get update
+   apt-get upgrade -y
+   pkg-update
+   pkg-upgrade -y
+   pkg-autoclean
+   apt-get install lua52
+   
+   wget https://raw.githubusercontent.com/Pavek-Martin/
+   prevod_gps_souradnic_do_formatu_pro_Garmin/refs/heads/
+   main/Lua_verze/garmin
+   
+   předchozí pčikaz musi byt jako jeden řádek, po jeho uspěšném
+   provedení napište příkaz "ls" měl by se oběvit výpis souboru
+   a mezi nimi také stažený soubor z nazvem "garmin"
+   
+   další přikaz bude:
+   chmod +x garmin
+   
+   a poslední přikaz:
+   mv garmin ~/../usr/bin/
+   
+   to je všechno, opět doporučuju prohlédnout adresár jpg/ se
+   screenshotama, kdykoliv napišete v terminalu "garmin" a 
+   odentrujete měl by se oběvit barvný help výpis programu z dalšíma
+   podrobnostma (jako je to na obrázcích)
+   na obrázku "obrazek_07.jpg" je vydět že když se na tabletu chvíli
+   podrží prst oběvý se nabídka vložit atd. takže tady když se klepne
+   na PASTE tak se na pozici kurzoru vloží obsah clipboardu, 
+   opět není potřeba něco pracně opisovat
+   to bude asi všechno, pro ukončení aplikace Termux napište
+   v terminálové okně příkaz - exit <enter>
+   
+  

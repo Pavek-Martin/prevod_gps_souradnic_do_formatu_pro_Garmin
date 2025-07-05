@@ -1,0 +1,239 @@
+#!/usr/bin/lua
+
+-- garmin_gps_convertor
+-- Google Maps, Mapy.cz a Android aplikace MAPS.MY -> Garmin
+
+-- definice barev
+green = "\27[32m"
+red = "\27[31m"
+cyan = "\27[36m"
+yellow = "\27[33m"
+reset = "\27[0m"
+bold = "\27[1m" -- novinka bold
+bold_green = "\27[1m\27[32m" -- a da se kombinovat
+
+--[[ 
+print(bold_green.."bold_green")
+print(red.."red") -- nebyl predtim reset taze zustane jako bold_red
+print(cyan.."cyan")
+print(yellow.."yellow")
+print(reset.."default color")
+]]--
+
+d_arg = #arg
+--print(d_arg)
+--print("delka arg = " .. d_arg)
+
+-- uprava argumentu arg[0]
+-- odstraneni vypisu cestyk souboru, napr. ze "/usr/bin/garmin_20" udela pouze "garmin_20"
+arg_0 = arg[0]
+d_arg_0 = #arg_0
+--print(d_arg_0)
+
+for aa = d_arg_0,1,-1 do
+--print(aa)
+znak_arg_0 = string.sub(arg_0, aa, aa)
+--print(znak_arg_0)
+
+if ( znak_arg_0 == "/" ) then
+nalezeno_arg_0 = aa
+break 
+end
+end
+
+--print(nalezeno_arg_0.."<<")
+arg_0_upraveny = string.sub(arg_0, nalezeno_arg_0 + 1, d_arg_0)
+--print(arg_0_upraveny)
+
+if (d_arg ~= 2) then
+--pri nezadani argumentu tiskne barevne napovedu (jako ostatni verze)
+--print(green .. 'tento program prevadi souradnice nekolika typu do formatu souradnic "Garmin"')
+print(bold_green .. 'tento program prevadi souradnice nekolika typu do formatu souradnic "Garmin"')
+--bold uz pak zustane i nadale, jinak by se tady musel pouzit reset
+--print(reset) -- zbytek uz bude bez bold, obycenim pismem
+print("")
+print(red .. 'toto je nekolik ukazek souradnic ktere pouzivaji www stranky "Google Maps"')
+-- i nadale bude tiskout v barve ktera uz byla zavolana, nez nedojde k nejake zmene
+print("50.0755535254892, 14.429683968740438") -- cili tady pro "red" uz staci pouze print
+print("64.13767053395023, -21.89129586682449")
+print("-33.90667755606154, 18.42039883044853")
+print("54.53380303960464, 18.547973426086507")
+
+print(cyan .. 'pro Android alikaci "MAPS.MY" vypadaji souradnice nejakeho obektu treba takto')
+print("50.07433, 14.43031")
+print("40.774126, -73.972655")
+print("-33.928997, 18.417401")
+print("64.14599, -21.942253")
+
+print(yellow .. 'www stranky "mapy.cz" pouzivaji takovyto format souradnic')
+print("50.0753708N, 14.4299775E")
+print("33.9214156S, 18.4149131E")
+print("64.1484644N, 21.9489853W")
+print("54.5218975N, 18.5419822E")
+
+print(reset .. "nekolik prikladu pouziti :")
+print(arg_0_upraveny .. " 50.0755535254892, 14.429683968740438")
+print(arg_0_upraveny .. " 40.774126, -73.972655")
+print(arg_0_upraveny .. " 50.0753708N, 14.4299775E")
+os.exit(1)
+end -- help
+
+arg_1 = arg[1]
+arg_2 = arg[2]
+
+print(arg_1 .. " " .. arg_2)
+--print(arg_1)
+--print(arg_2)
+
+-- hleda jestli je na konci arg[1] znak ","
+d_arg_1 = #arg[1]
+--print(d_arg_1)
+
+--d_arg_1b = string.len(arg[1]) -- lze i takto
+--print(d_arg_1b)
+
+najdi_carka = string.sub(arg_1, d_arg_1)
+--print(najdi_carka .. "<")
+if ( najdi_carka ~= "," ) then
+print("chyba zadani")
+os.exit(1)
+end
+
+--hleda jesli arg[1] a arg[2] nejsou typ souradnic mapy.cz (jako jedina v sobe obsahuje i pismena)
+z1="x"
+z2="y"
+nalezeno_mapy_cz = 0
+
+znak_seznam_1 = string.sub(arg_1, -2, -2) --vezme predposledni znak z arg[1]
+--print(znak_seznam_1)
+
+if (znak_seznam_1 == "N" or znak_seznam_1 == "S") then
+nalezeno_mapy_cz = (nalezeno_mapy_cz + 1)
+z1 = znak_seznam_1
+--print(z1.."<<")
+end
+
+znak_seznam_2 = string.sub(arg_2, -1, -1) --vezme posledni znak z arg[2]
+--print(znak_seznam_2)
+
+if (znak_seznam_2 == "E" or znak_seznam_2 == "W") then
+nalezeno_mapy_cz = (nalezeno_mapy_cz + 1)
+z2 = znak_seznam_2
+--print(z2.."<<")
+end
+
+--print("nalezeno_mapy_cz = " .. nalezeno_mapy_cz .. ", z1 = " .. z1 .. ", z2 = " .. z2)
+--print("arg[1] = " .. arg_1)
+--print("arg[2] = " .. arg_2)
+
+--funkce prevod souradnic a mapy.cz -> do Garmin
+function mapy_cz (x,coordinate) --volani funce bude mapy_cz(z1,s1) z1 se nahradi za x a s1 za coordinate a nebo z2 a s2 (arg[2])
+--x je type string (retezec znaku) a s1,s2 je uz predpripraveno jako type number, pro dalsi vypocty
+--napred se funce definuje, ulozi se do pameti a pak se teprve vola
+
+--zde bez ABS
+--print(x.."--z1")
+local stupne = math.modf(coordinate) --funkce modf() oddeli stupne od coordinate jako cele cislo (int)
+--print(stupne .. "---stupne")
+
+--minuty = ((coordinate - stupne) * 60) -- bude existovat vsude
+local minuty = ((coordinate - stupne) * 60) -- lokalni promenna ( mimo telo funkce uz "minuty" neexistuji)
+-- predava se ven z funkce pouze radek return
+--print(minuty .. "--minuty") -- uvnit funke tiske, jinde uz ne
+
+return (string.format("%s%02d %06.3f",x, stupne, minuty)) --zdejsi obdoba funkce printf() 
+-- zatim nic netiskne, jen preda vysledek a caka se az budou zpracovany oba coordinaty s1 i s2
+end -- funkce mapy.cz
+
+
+--mapy_cz 
+if (nalezeno_mapy_cz == 2) then
+--print("predov z mapy.cz")
+s1 = tonumber(string.sub(arg_1, 1, -3)) -- u coordinatu mapy.cz uzine na konci pismeno a carku a prevede string na cislo
+--print(z1)
+print(s1)
+--mapy_cz(z1,s1) -- vola funkci pro vypocet a tisk, mapy.cz pro (arg[1]) 
+out_mapy_cz = "" -- definuje prazdej string
+out_mapy_cz = out_mapy_cz .. mapy_cz(z1,s1) -- vola funkci pro vypocet a tisk, mapy.cz pro (arg[1])
+-- pripoji k nemu vystu z funce (return) provypocet coordinatu z arg[1]
+
+s2 = tonumber(string.sub(arg_2, 1, -2)) -- u argument arg[2] odebera nakoci jeden znak (pismeno pro mapy.cz), prevede na cislo
+print(s2)
+--print(z2)
+
+out_mapy_cz = out_mapy_cz .. " " -- prida mezeru mezi obema coordinaty
+out_mapy_cz = out_mapy_cz .. mapy_cz(z2,s2) -- vola funkci pro vypocet a tisk, mapy.cz pro (arg[2]), pripoji druhy vypocet
+print(bold_green .. "prevedeno do formatu pro Garmin")
+print(out_mapy_cz) -- tiskne konecni vysledek pro mapy.cz
+print(reset)
+os.exit(0)
+end -- nalezeno_mapy_cz
+
+--dalsi radek pouze pokus z local promenou uvnitr tela funkce
+--print(minuty) -- tady uz napise "nil" v jinejch jazycich napr. (NULL) apod.
+
+-- ostatni co nejsou mapy.cz
+--print("ostatni")
+
+print(string.sub(arg_1, 1, -2)) -- tisk arg_1, v plne dilce, bez carky na konci
+s1 = tonumber(string.sub(arg_1, 1, -2)) -- u coordinatu mapy.cz uzine na konci pismeno a carku a prevede string na cislo
+--print(s1) -- po prevodu do number, zkratil o jedno desetinne misto na konci
+
+print(arg_2)
+s2 = tonumber(string.sub(arg_2, 1, -1)) -- u argument arg[2] odebera nakoci jeden znak (pismeno pro mapy.cz), prevede na cislo
+--print(s2)
+
+-- N nebo S
+-- arg_1 kdyz se testoval na zaporny cislo tak to nefungovalo, takze testovano jako strings,
+-- druhej ale uz fungoval i jako type number
+t1 = string.sub(arg_1, 1, 1) -- prvni znak retezce arg_1 do promenny t1
+--print(t1.."<<")
+if t1 == "-" then
+-- hleda na zacatku stringu arg_1 znak "-"
+z1 = "S"
+s1 = math.abs(s1)
+-- nasel na zacatku znak "-" tak rovnou prevede s1 na kladne cislo
+else
+z1 = "N"
+end
+
+-- E nebo W
+t2 = string.sub(arg_2, 1, 1)
+--print(t2.."<<")
+if t2 == "-" then
+z2 = "W"
+s2 = math.abs(s2)
+else
+z2 = "E"
+end
+ 
+--print(z1)
+--print(s1)
+--print(z2)
+--print(s2)
+
+function neni_mapy_cz (x,coordinate)
+--print(x.."--z2")
+local stupne = math.modf(coordinate) --funkce modf() oddeli stupne od coordinate jako cele cislo (int)
+--print(stupne .. "---stupne")
+
+local minuty = ((coordinate - stupne) * 60) -- lokalni promenna ( mimo telo funkce uz "minuty" neexistuji)
+--print(minuty .. "--minuty") -- uvnit funke tiske, jinde uz ne
+
+return (string.format("%s%02d %06.3f",x, stupne, minuty)) --zdejsi obdoba funkce printf()
+end -- funkce nani_mapy_cz
+
+--print(neni_mapy_cz(z1,s1))
+--print(neni_mapy_cz(z2,s2))
+
+out_neni_mapy_cz = ""
+out_neni_mapy_cz = out_neni_mapy_cz .. neni_mapy_cz(z1,s1)
+out_neni_mapy_cz = out_neni_mapy_cz .. " "
+out_neni_mapy_cz = out_neni_mapy_cz .. neni_mapy_cz(z2,s2)
+
+-- tisk vysledku pro neni_mapy_cz()
+print(bold_green .. "prevedeno do formatu pro Garmin")
+print(out_neni_mapy_cz)
+print(reset)
+os.exit(0)
+

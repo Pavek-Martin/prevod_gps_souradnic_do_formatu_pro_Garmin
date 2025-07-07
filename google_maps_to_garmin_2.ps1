@@ -1,10 +1,10 @@
 ﻿cls
 
-# prevede GPS souradnice z Google maps do formatu pro Garmin, program MapSource a GPS navigaci Garmin Dakota
+# prevede GPS souradnice z "Google Maps" do formatu pro "Garmin", program "MapSource" a GPS navigaci Garmin "Dakota"
 
 Remove-Variable * -ErrorAction SilentlyContinue
 
-echo "50.0755535254892, 14.429683968740438" # opet podobna situace jako u maps.my, ruzny pocet desetinych mist tady 13, 15
+echo "50.0755535254892, 14.429683968740438" # opet podobna situace jako u maps.me, ruzny pocet desetinych mist tady 13, 15
 echo "64.13767053395023, -21.89129586682449" # delka desetinych mist 14 a 14 
 echo "-33.90667755606154, 18.42039883044853" # 14, 14
 echo "54.53380303960464, 18.547973426086507" # 14, 15

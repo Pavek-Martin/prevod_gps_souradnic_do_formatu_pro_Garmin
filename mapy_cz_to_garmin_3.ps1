@@ -1,7 +1,7 @@
 ﻿cls
 
 <#
-   prevede GPS souradnice z mapy.cz do formatu pro Garmin ( program MapSource a navigace Garmin Dakota )
+     prevede GPS souradnice z mapy.cz do formatu pro Garmin ( program MapSource a navigace Garmin Dakota )
 #>
 
 Remove-Variable * -ErrorAction SilentlyContinue
@@ -22,7 +22,6 @@ echo $mapy_cz
 
 # novy zpusob s funci StringFind
 $d_mapy_cz = $mapy_cz.Length
-#echo $d_maps_my
 $znak_carka = ","
 $nalezeno_carka = $mapy_cz.IndexOf($znak_carka) # StringFind
 #echo $nalezeno_carka

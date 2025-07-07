@@ -2,7 +2,7 @@
 <#
     univerzalni konvertor pro vsechny tri tipy souradnic na jednou
     automaticky rozpozna jeden ze tri typu ktery mu byl zadan a podle toho urci metodu prevodu
-    pro "Google Maps" a "MAPS.MY" se pouziva stejna metoda, souradnice se lisi pouze delkou,
+    pro "Google Maps" a "MAPS.ME" se pouziva stejna metoda, souradnice se lisi pouze delkou,
     tedy poctem desetinych mist a pro "mapy.cz" ktera jako jedina v sobe krome cislic obahuje 
     i pismena a jeste neobsahuje nikdy zaporna cisla tak pro tu pouziva jinou metodu prevodu
     vstup neni ostren proti chybe zadani ve smyslu regular expressions
@@ -29,7 +29,7 @@ Write-Host -ForegroundColor $c "-33.90667755606154, 18.42039883044853"
 Write-Host -ForegroundColor $c "54.53380303960464, 18.547973426086507"
 
 $c = "cyan"
-Write-Host -ForegroundColor $c 'pro Android alikaci "MAPS.MY" vypadaji souradnice nejakeho obektu treba takto'
+Write-Host -ForegroundColor $c 'pro Android alikaci "MAPS.ME" vypadaji souradnice nejakeho obektu treba takto'
 Write-Host -ForegroundColor $c "50.07433, 14.43031"
 Write-Host -ForegroundColor $c "40.774126, -73.972655"
 Write-Host -ForegroundColor $c "-33.928997, 18.417401"
@@ -71,7 +71,7 @@ break # po prvnim nalezu jakehokoliv pismena z pole $pole_seznam_cz
 
 # funkce prevod souradnic a mapy.cz -> do Garmin
 function mapy_cz ([double] $Coordinate) {
-# $absCoord = [math]::Abs($Coordinate) # prevod na absolutni hodnotu ( mapy.cz nepouziva zaporna cisla jako maps.my)
+# $absCoord = [math]::Abs($Coordinate) # prevod na absolutni hodnotu ( mapy.cz nepouziva zaporna cisla jako maps.me)
 # $degrees = [math]::Floor($absCoord) # proto zde tyto dva radky odpadaji a pribyli nove promenne $p2 a $p4
 $degrees = [math]::Floor($Coordinate) # nevim jesli tady jde - local $degrees - napr. ??
 $minutes = (($Coordinate - $degrees) * 60)
@@ -83,7 +83,7 @@ echo $r2
 }
 
 
-# funkce prevod souradnic Google Maps & MAPS.MY -> do Garmin
+# funkce prevod souradnic Google Maps & MAPS.ME -> do Garmin
 function neni_mapy_cz ([double] $Coordinate) {
 $absCoord = [math]::Abs($Coordinate)
 #write-host $absCoord"<--a" "write-host" se na rozdil od prikazu "echo" nebude plect do vytupu z funkce

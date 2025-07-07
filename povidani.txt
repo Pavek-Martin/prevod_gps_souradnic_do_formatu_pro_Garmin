@@ -57,25 +57,25 @@ nepotrebuju
 dnes jsem jeste napsal dva jiz drive zminovane konvertory a to z
 "Google Maps" do formatu "Garmin" a z "Mapy.cz" do "Garmin"
 u prvniho jemnovaneho tedy "Gogle Maps" jsem mel praci o neco jednodussi
-format souradnic je skoro stejny jako pro aplikaci "maps.my"
+format souradnic je skoro stejny jako pro aplikaci "maps.me"
 akorat se lisi poctem desetinych mist, priklad souradnice pro Google
-"50.0755535254892, 14.429683968740438"  a totez pro "maps.my"
+"50.0755535254892, 14.429683968740438"  a totez pro "maps.me"
 "50.07433, 14.43031" i zde jsem se setkal z nestejnym poctem desetinych
 mist jednou bylo 13 jindy 14 a vetsinou 15
 musim rict ze prevod z "Google Maps" do "Garmin" vykazuje vetsi nepresnost
-nez prevod z formatu "maps.my" do "Garmin" vice viz. screenshoty a prilozeny
+nez prevod z formatu "maps.me" do "Garmin" vice viz. screenshoty a prilozeny
 soubor "gpx" ani po usilovnem hledani na internetu se me nepodarilo
 najit zpusob jak toto vice zpresnit, tato vyssi nepresnost se tyka
-i prevodu z "mapy.cz" do "Garmin" nejlepe z tohoto vysel format "maps.my"
+i prevodu z "mapy.cz" do "Garmin" nejlepe z tohoto vysel format "maps.me"
 u formatu souradnic pro "mapy.cz" jsem se setkal stim ze nepouziva
 kladne nebo zaporne cislo ale souradnice vypada napr. takto 
 50.0753708N, 14.4299775E jeji soucati je jiz rovnou to co se muselo u
-formatu "maps.my" a "google" urcovat v zavislosti na kladnem nebo zapornem
+formatu "maps.me" a "google" urcovat v zavislosti na kladnem nebo zapornem
 cisle kde paklize bylo prvni cislo kladne znamenalo to "N" zaporne "S"
 druhe cislo kladne znamenalo "E" a druhe cislo zaporne znamenalo "W"
 takze anglicky sever, jih, vychod, zapad, format "mapy.cz" ma vsechna 
 cisla pouze kladna,delka desetinych mist pro "mapy.cz" lezi nekde uprostred 
-mezi "Google" a "maps.my" zde se zda ze pocet desetinych mist je konstante 7
+mezi "Google" a "maps.me" zde se zda ze pocet desetinych mist je konstante 7
 uvedu par prikladu
 a za sedmim znakem je vzdy ono pismeno (N,S,E nebo W)
 "50.0753708N, 14.4299775E" "33.9214156S, 18.4149131E"
@@ -127,7 +127,7 @@ coz bych byl rad, zatim je to pro me cele tak trosku zklamanim
 22.6.2025
 nedokazu si vysvetlit jednu vec, logicky si myslim ze vetsi pocet 
 desetinej mist, tim narazim na "Google Maps" ma vlastne polohu zpresnovat
-a ne naopak, proc dava souradnice z aplikce "maps.my" z 6ti desetinejma
+a ne naopak, proc dava souradnice z aplikce "maps.me" z 6ti desetinejma
 mistama lepsi vysledek nez "Google Maps" ktera ma desetinejch mist 15 !
 a podobne tak "mapy.cz" ja nevim co voni pouzivaj za metodu je to divny
 jako postup me pride spravnej kazdej vi ze hodina ma 60 minut a zbytek
@@ -136,7 +136,7 @@ udelal jsem mnoho trasovejch bodu primo v navigaci venku v terenu
 pri zobrazovany presnosti GPS signalu z toleranci 2 metry i onu jiz
 zminovanou stanici metra I.P. Pavlova a poloha preste fyzicky sedi
 a shoduje se i z polohou stanici metra I.P. Pavlova na mape v programu
-"BaseCamp" a i z vysledkem prevodu souradnice z aplikace "maps.my"
+"BaseCamp" a i z vysledkem prevodu souradnice z aplikace "maps.me"
 moji utilitou me opravdu pripada tyhle firmy voni vzdycky pouzivaj
 neco extra aby se vtom krome nich nikdo jinej nevyznal a aby to 
 nebylo pouzitelny jinde, co firma to format, proste zase jenom dalsi
@@ -200,7 +200,7 @@ co se da pouzivat
 5.7.2025 update
 ještě jsem napsal jednu verzi programu, v jazyce Lua verze 5.2.3
 program poběži na počítači z linuxem např. Ubuntu a na tabletu
-z androidem v aplikaci Temux ( už jsem o ní psal mnohokrát )
+z androidem v aplikaci Termux ( už jsem o ní psal mnohokrát )
 umi už rovnou vsechny tři formáty souřadnic jako předchozí C++
 verze.
 následuje postup, krok po kroku jak ji zprovoznit na tabletu z
